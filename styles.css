@@ -3,7 +3,7 @@
     --font-texto: 'Montserrat';
     --verde-aqua: hsl(158, 36%, 37%);
     --verde-aqua-escuro: hsl(159, 71%, 16%);
-    --branco-gelo: hsl(30, 38%, 92%);
+    --brackground: hsl(30, 38%, 92%);
     --preto: hsl(212, 21%, 14%);
     --cinza: hsl(228, 12%, 48%);
     --branco: hsl(0, 0%, 100%);
@@ -11,191 +11,125 @@
 }
 
 body{
-    width: 375px;
-    background: var(--branco-gelo);
-        
-}
-
-.container{
-    background-color: var(--branco);
-    border-radius: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-}
-
-
-.imagem__perfume{
-    width: 355px;
-    border-radius: 10px 10px 0 0;
-    
-}
-
-.descricao{
-    padding: 10px 30px 10px 30px;
-   
-}
-
-.titulo{
-    font-family: var(--font-texto);
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 5px;
-    color: var(--cinza);
-        
-}
-
-.titulo__destaque{
-    font-family: var(--font-destaque);
-    font-weight: 700;
-    font-size: 30px;
-    color: var(--preto);
-    
-}
-
-.texto {
-    font-family: var(--font-texto);
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--cinza);
-    line-height: 25px;
-}
-
-.preco{
-    display: flex;
-    align-items: center;
-    padding: 10px 30px 0 30px;
-}
-
-.preco__dolar{
-    font-family: var(--font-destaque);
-    font-weight: 700;
-    color: var(--verde-aqua);
-    font-size: 30px;
-    padding-right: 15px;
     margin: 0;
-}
-
-.preco-dolar__desconto{
-    font-family: var(--font-texto);
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--cinza);
-    text-decoration: line-through;
-    margin: 0;
-}
-
-
-.botao{
-    width: 300px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--verde-aqua);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 15px auto;
-}
-
-.botao:hover{
-    background-color: var(--verde-aqua-escuro);
-}
-
-.carrinho__compras{
-    width: 20px;
-    height: 20px;
-}
-
-.botao__cart{
-    font-family: var(--font-texto);
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--branco);
-    text-decoration: none;
-    padding: 20px;
-    
+    background: var(--brackground);
 }
 
 .imagem__desktop{
     display: none;
 }
 
-@media screen and (min-width: 1440px) {
-    body{
-    background: var(--branco-gelo);
-    
-    }
+.container-page{
+    background: var(--branco);
+    width: 340px;
+    border-radius: 1rem;
+    margin: 1rem auto;
+}
 
-    .imagem__perfume{
+.imagem__mobile{
+    width: 340px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.descricao__cartao{
+    padding: 1.5rem;
+}
+
+.descricao{
+    font-family: var(--font-texto);
+    color: var(--cinza);
+    letter-spacing: 0.3rem;/*letter-spacing - espaço entre letras*/
+    font-size: 0.7rem;
+}
+
+.titulo{
+    font-family: var(--font-destaque);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.titulo__paragrafo{
+    font-family: var(--font-texto);
+    color: var(--cinza);
+    font-size: 0.88rem;
+    line-height: 1.5rem;/*line-height - espaço entre linhas*/
+    margin: 1rem 0 0 0;
+}
+
+.preco{
+    display: flex;
+    align-items: center; 
+    margin: 1rem 0;   
+}
+
+.preco__dolar{
+    font-family: var(--font-destaque);
+    color:var(--verde-aqua);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.preco__desconto{
+    font-family: var(--font-texto);
+    color: var(--cinza);
+    margin: 0 0 0 1rem;    
+    text-decoration: line-through;/*line-through - deixa o texto riscado ao meio*/
+}
+
+.botao{
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--verde-aqua);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao__texto{
+    font-family: var(--font-texto);
+    color: var(--branco);
+    margin-left: 1rem;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .imagem__mobile{
         display: none;
     }
 
-    .container{
-        display: inline-flex;
-        align-content: center;
-        border-radius: 20px;
-        padding-bottom: 0;        
+    .container-page{
+        width: 700px;
+        display: flex;
+        margin-top: 10rem;
     }
-    
+
     .imagem__desktop{
-        width: 720px;        
         display: block;
-        border-radius: 20px 0 0 20px;
-        padding: 0;
+        width: 350px;
+        border-radius: 1rem 0 0 1rem;
 
     }
 
+    .descricao__cartao{
+        padding: 2rem;
+    }
+
+    .descricao{
+        font-size: 1rem;
+    }
     
+    .titulo{        
+        font-size: 3rem;        
+    }
     
-    .informacao{
-        width: 720px;        
-        padding: 25px 50px 10px 50px;
-    }
-
-    .titulo{
-        font-size: 20px;
-    }
-
-    .titulo__destaque{
-        font-size: 110px;
-        word-wrap: break-word;
-             
-    }
-
-
-    .texto {
-        font-size: 40px;
-        line-height: 50px;
-        
-    }
-
-    .preco__dolar{
-        font-size: 100px;
-        padding-right: 80px;       
+    .titulo__paragrafo{
+        font-size: 1.1rem;
         
     }
     
-    .preco-dolar__desconto{
-        font-size: 30px;       
-        
-    }
-
-    .botao{
-        width: 650px;
-        height: 80px;
-        border-radius: 20px;
-       
-    }
-       
-    .carrinho__compras{
-        width: 40px;
-        height: 40px;
-    }
+   
     
-    .botao__cart{        
-        font-size: 34px;      
-        
-    }
-
-
+    
 }
